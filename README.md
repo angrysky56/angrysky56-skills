@@ -8,16 +8,17 @@ Designed to optimize LLM context efficiency, enforce systematic reasoning, and s
 
 ## 📦 Included Skills
 
-| Skill | Description | Key Features |
-| :--- | :--- | :--- |
-| [**`ai-cli`**](./ai-cli) | Replaces legacy GNU coreutils (`find`, `grep`, `cat`, `sed`, `ls`) with fast, token-efficient CLI tools (`rg`, `fd`, `ast-grep`, `bat`, `sd`, `jq`, `yq`, `tokei`, `eza`, `dust`, `procs`, `delta`, `just`). | • Token preservation & color stripping<br>• `.gitignore`-aware file & code search<br>• Structured JSON parsing & AST queries<br>• Cross-platform rules |
-| [**`explorer`**](./explorer) | A general-purpose reasoning loop (**Frame**, **Generate**, **Ground**, **Deliver**) for open-ended, ambiguous, or high-stakes problem-solving. | • Premise checking & goal reframing<br>• Abductive candidate generation<br>• Evidence grounding & verification<br>• Actionable, high-density delivery |
+| Skill                        | Description                                                                                                                                                                                                  | Key Features                                                                                                                                           |
+| :--------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [**`ai-cli`**](./ai-cli)     | Replaces legacy GNU coreutils (`find`, `grep`, `cat`, `sed`, `ls`) with fast, token-efficient CLI tools (`rg`, `fd`, `ast-grep`, `bat`, `sd`, `jq`, `yq`, `tokei`, `eza`, `dust`, `procs`, `delta`, `just`). | • Token preservation & color stripping<br>• `.gitignore`-aware file & code search<br>• Structured JSON parsing & AST queries<br>• Cross-platform rules |
+| [**`explorer`**](./explorer) | A general-purpose reasoning loop (**Frame**, **Generate**, **Ground**, **Deliver**) for open-ended, ambiguous, or high-stakes problem-solving.                                                               | • Premise checking & goal reframing<br>• Abductive candidate generation<br>• Evidence grounding & verification<br>• Actionable, high-density delivery  |
 
 ---
 
 ## 🚀 Installation & Usage
 
 ### 1. Global Installation (Recommended)
+
 Link or copy skill directories into your AI assistant's global configuration directory (e.g. `~/.gemini/config/skills/` or `~/.claude/skills/`):
 
 # Modify the path below to link your skills directory in the following commands:
@@ -29,6 +30,7 @@ ln -s ~/your/path/to/angrysky56-skills/ai-cli ~/.gemini/config/skills/ai-cli
 ```
 
 ### 2. Workspace Scope
+
 To make skills available to an agent within a specific project repository, link them into the `.agents/skills/` folder at your project root:
 
 ```bash
@@ -38,6 +40,7 @@ ln -s ~/your/path/to/angrysky56-skills/ai-cli .agents/skills/ai-cli
 ```
 
 ### 3. Registration via `skills.json`
+
 For setups supporting custom skill manifests, register skills in `skills.json`:
 
 ```json
@@ -54,15 +57,18 @@ For setups supporting custom skill manifests, register skills in `skills.json`:
 ## 🛠️ Skill Highlights
 
 ### 1. [`ai-cli`](./ai-cli)
+
 Traditional shell tools were built for human interactive use. They often flood LLM context windows, get stuck in infinite directory loops, and output unstructured text.
 
 `ai-cli` teaches agents to use modern alternatives:
-* **Search & Discovery:** `fd` (replaces `find`), `rg` (ripgrep), `ast-grep` (structural code search).
-* **Inspection & Editing:** `bat` (surgical line-range viewing), `sd` (safe string replacements).
-* **Data Processing:** `jq` (JSON filtering), `yq` (YAML/TOML filtering), `tokei` (code stats).
-* **System & Execution:** `eza` (tree view), `dust` (disk usage), `procs` (processes), `delta` (git diffs), `just` (recipe runner).
+
+- **Search & Discovery:** `fd` (replaces `find`), `rg` (ripgrep), `ast-grep` (structural code search).
+- **Inspection & Editing:** `bat` (surgical line-range viewing), `sd` (safe string replacements).
+- **Data Processing:** `jq` (JSON filtering), `yq` (YAML/TOML filtering), `tokei` (code stats).
+- **System & Execution:** `eza` (tree view), `dust` (disk usage), `procs` (processes), `delta` (git diffs), `just` (recipe runner).
 
 ### 2. [`explorer`](./explorer)
+
 When facing complex bugs, architectural choices, or vague prompts, agents tend to leap to first conclusions. `explorer` imposes a disciplined 4-phase reasoning protocol:
 
 1. **Frame:** Identify the true goal behind a request and test underlying premises.
@@ -101,7 +107,6 @@ When adding a new skill to this repository, adhere to the standard skill layout:
    name: my-skill
    description: Concise description of when and why an agent should trigger this skill.
    ---
-
    # Skill Title
 
    Instructions and rules for the agent...
