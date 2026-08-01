@@ -20,10 +20,12 @@ Designed to optimize LLM context efficiency, enforce systematic reasoning, and s
 ### 1. Global Installation (Recommended)
 Link or copy skill directories into your AI assistant's global configuration directory (e.g. `~/.gemini/config/skills/` or `~/.claude/skills/`):
 
+# Modify the path below to link your skills directory in the following commands:
+
 ```bash
 # Symlink individual skills to your global config
-ln -s ~/Repositories/ai_workspace/angrysky56-skills/explorer ~/.gemini/config/skills/explorer
-ln -s ~/Repositories/ai_workspace/angrysky56-skills/ai-cli ~/.gemini/config/skills/ai-cli
+ln -s ~/your/path/to/angrysky56-skills/explorer ~/.gemini/config/skills/explorer
+ln -s ~/your/path/to/angrysky56-skills/ai-cli ~/.gemini/config/skills/ai-cli
 ```
 
 ### 2. Workspace Scope
@@ -31,8 +33,8 @@ To make skills available to an agent within a specific project repository, link 
 
 ```bash
 mkdir -p .agents/skills
-ln -s ~/Repositories/ai_workspace/angrysky56-skills/explorer .agents/skills/explorer
-ln -s ~/Repositories/ai_workspace/angrysky56-skills/ai-cli .agents/skills/ai-cli
+ln -s ~/your/path/to/angrysky56-skills/explorer .agents/skills/explorer
+ln -s ~/your/path/to/angrysky56-skills/ai-cli .agents/skills/ai-cli
 ```
 
 ### 3. Registration via `skills.json`
