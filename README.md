@@ -52,7 +52,7 @@ For setups supporting custom skill manifests, register skills in `skills.json`:
 ## 🛠️ Skill Highlights
 
 ### 1. [`ai-cli`](file:///home/ty/Repositories/ai_workspace/angrysky56-skills/ai-cli)
-Traditional shell tools were built for human interactive use. They often flood LLM context windows, get stuck in infinite directory loops, and output unstructured text. 
+Traditional shell tools were built for human interactive use. They often flood LLM context windows, get stuck in infinite directory loops, and output unstructured text.
 
 `ai-cli` teaches agents to use modern alternatives:
 * **Search & Discovery:** `fd` (replaces `find`), `rg` (ripgrep), `ast-grep` (structural code search).
