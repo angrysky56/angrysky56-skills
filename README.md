@@ -10,8 +10,8 @@ Designed to optimize LLM context efficiency, enforce systematic reasoning, and s
 
 | Skill | Description | Key Features |
 | :--- | :--- | :--- |
-| [**`ai-cli`**](file:///home/ty/Repositories/ai_workspace/angrysky56-skills/ai-cli) | Replaces legacy GNU coreutils (`find`, `grep`, `cat`, `sed`, `ls`) with fast, token-efficient CLI tools (`rg`, `fd`, `ast-grep`, `bat`, `sd`, `jq`, `yq`, `tokei`, `eza`, `dust`, `procs`, `delta`, `just`). | • Token preservation & color stripping<br>• `.gitignore`-aware file & code search<br>• Structured JSON parsing & AST queries<br>• Cross-platform rules |
-| [**`explorer`**](file:///home/ty/Repositories/ai_workspace/angrysky56-skills/explorer) | A general-purpose reasoning loop (**Frame**, **Generate**, **Ground**, **Deliver**) for open-ended, ambiguous, or high-stakes problem-solving. | • Premise checking & goal reframing<br>• Abductive candidate generation<br>• Evidence grounding & verification<br>• Actionable, high-density delivery |
+| [**`ai-cli`**](./ai-cli) | Replaces legacy GNU coreutils (`find`, `grep`, `cat`, `sed`, `ls`) with fast, token-efficient CLI tools (`rg`, `fd`, `ast-grep`, `bat`, `sd`, `jq`, `yq`, `tokei`, `eza`, `dust`, `procs`, `delta`, `just`). | • Token preservation & color stripping<br>• `.gitignore`-aware file & code search<br>• Structured JSON parsing & AST queries<br>• Cross-platform rules |
+| [**`explorer`**](./explorer) | A general-purpose reasoning loop (**Frame**, **Generate**, **Ground**, **Deliver**) for open-ended, ambiguous, or high-stakes problem-solving. | • Premise checking & goal reframing<br>• Abductive candidate generation<br>• Evidence grounding & verification<br>• Actionable, high-density delivery |
 
 ---
 
@@ -41,8 +41,8 @@ For setups supporting custom skill manifests, register skills in `skills.json`:
 ```json
 {
   "entries": [
-    { "path": "/home/ty/Repositories/ai_workspace/angrysky56-skills/explorer" },
-    { "path": "/home/ty/Repositories/ai_workspace/angrysky56-skills/ai-cli" }
+    { "path": "path/to/angrysky56-skills/explorer" },
+    { "path": "path/to/angrysky56-skills/ai-cli" }
   ]
 }
 ```
@@ -51,7 +51,7 @@ For setups supporting custom skill manifests, register skills in `skills.json`:
 
 ## 🛠️ Skill Highlights
 
-### 1. [`ai-cli`](file:///home/ty/Repositories/ai_workspace/angrysky56-skills/ai-cli)
+### 1. [`ai-cli`](./ai-cli)
 Traditional shell tools were built for human interactive use. They often flood LLM context windows, get stuck in infinite directory loops, and output unstructured text.
 
 `ai-cli` teaches agents to use modern alternatives:
@@ -60,7 +60,7 @@ Traditional shell tools were built for human interactive use. They often flood L
 * **Data Processing:** `jq` (JSON filtering), `yq` (YAML/TOML filtering), `tokei` (code stats).
 * **System & Execution:** `eza` (tree view), `dust` (disk usage), `procs` (processes), `delta` (git diffs), `just` (recipe runner).
 
-### 2. [`explorer`](file:///home/ty/Repositories/ai_workspace/angrysky56-skills/explorer)
+### 2. [`explorer`](./explorer)
 When facing complex bugs, architectural choices, or vague prompts, agents tend to leap to first conclusions. `explorer` imposes a disciplined 4-phase reasoning protocol:
 
 1. **Frame:** Identify the true goal behind a request and test underlying premises.
