@@ -1,0 +1,87 @@
+{
+  "skill_name": "explorer",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "our postgres read queries got about 3x slower right after we added an index on orders(customer_id, created_at) last sprint. how do i tune that index so it stops slowing things down? was thinking maybe a partial index or dropping created_at from it",
+      "expected_output": "",
+      "files": [],
+      "assertions": [
+        "Challenges the causal premise (that the index is what slowed reads) rather than accepting it and tuning within it",
+        "The premise challenge appears within the first three sentences, not after tuning advice",
+        "Names at least two distinct mechanisms for the slowdown that are not 'the index is shaped wrong'",
+        "Explains why the user's own two proposals (partial index, dropping created_at) are premature or actively risky",
+        "Gives one specific decisive test that would confirm or eliminate the index as the cause",
+        "Response is under 900 words"
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "i have a python script that processes about 50k rows from a csv and it takes 4 minutes. what's the best way to multiprocess it? i've got 12 cores. each row it looks up a value and appends the result to a list",
+      "expected_output": "",
+      "files": [],
+      "assertions": [
+        "States that multiprocessing may be the wrong fix before giving any multiprocessing recipe",
+        "Derives or cites the per-row time (~4.8ms) as the evidence that the workload is anomalous",
+        "Names a likely real bottleneck other than CPU (per-row I/O, network call, or a linear scan inside the loop)",
+        "Still provides the literal multiprocessing answer for the case where it genuinely applies",
+        "The reframe appears within the first three sentences",
+        "Response is under 800 words"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "postgres or mongodb - which one will scale better for us long term? we're 4 people building a b2b analytics tool, pre-revenue. i keep going back and forth and i need to just pick one this week and stop thinking about it",
+      "expected_output": "",
+      "files": [],
+      "assertions": [
+        "Commits to a definite recommendation rather than presenting a balanced pros/cons list with no verdict",
+        "The recommendation appears within the first three sentences",
+        "Explicitly narrows or rejects 'which scales better long term' as the deciding question instead of answering it as posed",
+        "Names at least one specific condition that would flip the recommendation",
+        "Makes no confident prediction about a scaling outcome that cannot be known for a pre-revenue product",
+        "Response is under 800 words"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "my local rag pipeline started returning garbage answers about 3 days ago. nothing changed in my code as far as i know - i did update the sentence-transformers package last week and i added ~2000 new docs to the chroma collection on monday. embeddings look fine when i spot check them. why is this happening?",
+      "expected_output": "",
+      "files": [],
+      "assertions": [
+        "Offers at least three candidate explanations with one clearly identified as leading",
+        "Explains why spot-checking individual embeddings cannot detect this class of problem",
+        "Names one decisive test that discriminates the leading hypothesis from the rivals",
+        "Uses provisional language for the leading cause rather than asserting it as established",
+        "The leading hypothesis appears within the first three sentences",
+        "Response is under 900 words"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "can you explain what a KV cache is in LLM inference and why it matters for memory? i keep seeing it mentioned when people talk about context length limits but i don't really get the mechanism",
+      "expected_output": "",
+      "files": [],
+      "assertions": [
+        "Explains what is actually stored and why it stays reusable (past keys/values do not change), rather than defining the term and listing consequences",
+        "Uses a concrete physical analogy or a worked numeric example with real numbers",
+        "Every technical term is glossed inline in plain language at first use - check specifically for softmax, matmul, fp16/quantization, GQA/MQA, and any big-O notation",
+        "Explicitly connects the mechanism back to the user's stated confusion about context length limits",
+        "Response is under 1000 words",
+        "No throat-clearing opener AND no closing recap/TL;DR/'in short' section"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "what's the command to see which process is using port 8080 on linux",
+      "expected_output": "",
+      "files": [],
+      "assertions": [
+        "The command appears within the first two lines of the response",
+        "Contains no section headings and no narration of reasoning method",
+        "Adds no provisional or hypothesis-framing language to what is a factual command answer",
+        "Response is under 250 words"
+      ]
+    }
+  ]
+}
