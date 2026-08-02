@@ -10,7 +10,7 @@ Designed to optimize LLM context efficiency, enforce systematic reasoning, and s
 
 | Skill                                                                                                  | Description                                                                                                                                                                                                  | Key Features                                                                                                                                                                       |
 | :----------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`adaptive-socio-emotional-knowledge-ecosysytem`**](./adaptive-socio-emotional-knowledge-ecosysytem) | Provides structured analytical patterns for understanding human behavior and intent through emotional substrates, Information Structure (IS) capture, and transition dynamics.                               | • 7 primary emotional systems (Panksepp)<br>• Dual Process Model (RWA/SDO) bridge<br>• 12-pattern behavioral library<br>• 5-step analytical query framework                        |
+| [**`adaptive-socio-emotional-knowledge-ecosystem`**](./adaptive-socio-emotional-knowledge-ecosystem) | Provides structured analytical patterns for understanding human behavior and intent through emotional substrates, Information Structure (IS) capture, and transition dynamics.                               | • 7 primary emotional systems (Panksepp)<br>• Dual Process Model (RWA/SDO) bridge<br>• 12-pattern behavioral library<br>• 5-step analytical query framework                        |
 | [**`ai-cli`**](./ai-cli)                                                                               | Replaces legacy GNU coreutils (`find`, `grep`, `cat`, `sed`, `ls`) with fast, token-efficient CLI tools (`rg`, `fd`, `ast-grep`, `bat`, `sd`, `jq`, `yq`, `tokei`, `eza`, `dust`, `procs`, `delta`, `just`). | • Token preservation & color stripping<br>• `.gitignore`-aware file & code search<br>• Structured JSON parsing & AST queries<br>• Cross-platform rules                             |
 | [**`companion-in-inquiry`**](./companion-in-inquiry)                                                   | Eradicates patronizing "therapist/lecturer" AI defaults and sycophancy, enforcing concrete mechanics over jargon for collaborative conceptual exploration.                                                   | • Anti-sycophancy clause & premise testing<br>• Concrete physical mapping & load-bearing tests<br>• Rejection of essay drift & false forks<br>• Peer-level collaborative discovery |
 | [**`explorer`**](./explorer)                                                                           | A general-purpose reasoning loop (**Frame**, **Generate**, **Ground**, **Deliver**) for open-ended, ambiguous, or high-stakes problem-solving.                                                               | • Premise checking & goal reframing<br>• Abductive candidate generation<br>• Evidence grounding & verification<br>• Actionable, high-density delivery                              |
@@ -25,7 +25,7 @@ Link or copy skill directories into your AI assistant's global configuration dir
 
 ```bash
 # Symlink skills to your global config directory
-ln -s ~/your/path/to/angrysky56-skills/adaptive-socio-emotional-knowledge-ecosysytem ~/.gemini/config/skills/adaptive-socio-emotional-knowledge-ecosysytem
+ln -s ~/your/path/to/angrysky56-skills/adaptive-socio-emotional-knowledge-ecosystem ~/.gemini/config/skills/adaptive-socio-emotional-knowledge-ecosystem
 ln -s ~/your/path/to/angrysky56-skills/ai-cli ~/.gemini/config/skills/ai-cli
 ln -s ~/your/path/to/angrysky56-skills/companion-in-inquiry ~/.gemini/config/skills/companion-in-inquiry
 ln -s ~/your/path/to/angrysky56-skills/explorer ~/.gemini/config/skills/explorer
@@ -37,7 +37,7 @@ To make skills available to an agent within a specific project repository, link 
 
 ```bash
 mkdir -p .agents/skills
-ln -s ~/your/path/to/angrysky56-skills/adaptive-socio-emotional-knowledge-ecosysytem .agents/skills/adaptive-socio-emotional-knowledge-ecosysytem
+ln -s ~/your/path/to/angrysky56-skills/adaptive-socio-emotional-knowledge-ecosystem .agents/skills/adaptive-socio-emotional-knowledge-ecosystem
 ln -s ~/your/path/to/angrysky56-skills/ai-cli .agents/skills/ai-cli
 ln -s ~/your/path/to/angrysky56-skills/companion-in-inquiry .agents/skills/companion-in-inquiry
 ln -s ~/your/path/to/angrysky56-skills/explorer .agents/skills/explorer
@@ -51,7 +51,7 @@ For setups supporting custom skill manifests, register skills in `skills.json`:
 {
   "entries": [
     {
-      "path": "path/to/angrysky56-skills/adaptive-socio-emotional-knowledge-ecosysytem"
+      "path": "path/to/angrysky56-skills/adaptive-socio-emotional-knowledge-ecosystem"
     },
     { "path": "path/to/angrysky56-skills/ai-cli" },
     { "path": "path/to/angrysky56-skills/companion-in-inquiry" },
@@ -64,7 +64,7 @@ For setups supporting custom skill manifests, register skills in `skills.json`:
 
 ## 🛠️ Skill Highlights
 
-### 1. [`adaptive-socio-emotional-knowledge-ecosysytem`](./adaptive-socio-emotional-knowledge-ecosysytem)
+### 1. [`adaptive-socio-emotional-knowledge-ecosystem`](./adaptive-socio-emotional-knowledge-ecosystem)
 
 Analyzes human behavior, political positioning, conflict, and organizational dynamics through neurobiological substrates and narrative capture:
 
@@ -107,7 +107,7 @@ When facing complex bugs, architectural choices, or vague prompts, agents tend t
 
 ```
 angrysky56-skills/
-├── adaptive-socio-emotional-knowledge-ecosysytem/ # ASEKE behavioral analysis framework
+├── adaptive-socio-emotional-knowledge-ecosystem/ # ASEKE behavioral analysis framework
 │   ├── SKILL.md                                  # Core framework & 5-step query procedure
 │   └── references/                               # Modular reference guides
 │       ├── biological-substrates.md              # Panksepp's systems & political bridges
