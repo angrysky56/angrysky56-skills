@@ -123,6 +123,40 @@ earned its keep by ruling things out, not by being shown.
 
 ---
 
+## Using the aseke-compass MCP Server
+
+If the `aseke-compass` tools are available they cover some of the same ground as this
+skill. They are not interchangeable — the server holds reference data, this skill holds
+the procedure and the output discipline. Use each for what it is good at.
+
+**`get_system_info` — use it.** This is the server's real value. Its per-system entries
+are richer than `references/biological-substrates.md`, especially the `isVulnerability`
+and `chronicEffect` fields, and it retrieves one system on demand instead of loading
+all seven. Call it in Step 1 once you have a candidate system. Prefer it over the
+reference file when both are available.
+
+**`match_patterns` — do not rely on it.** It scores by literal word overlap against
+pattern metadata, including stopwords, so it only returns matches when the signals are
+already phrased in framework vocabulary. Feeding it real observations ("refuses the
+change, won't say why") returns nothing; feeding it "identity threat, FEAR" returns the
+pattern that contains those words. That is circular — it can only find what you already
+named. Match patterns yourself against `references/pattern-library.md`, where you can
+reason semantically about behavioural resemblance.
+
+**`analyze_behavior` — do not call it when this skill is loaded.** It performs no
+analysis. It returns a fixed scaffold — all seven systems, all twelve patterns, and the
+five step headings — identical regardless of input. Two costs: it duplicates the
+procedure you already have, and it front-loads the entire catalogue into context, which
+is the direct cause of the bloat that the silent-advisory discipline exists to prevent.
+More framework in context becomes more framework in the output.
+
+**`list_all`** is a cheap index and is fine for orientation.
+
+The general rule: pull *facts* from the server, keep *judgment* here. Retrieval on
+demand is progressive disclosure; dumping the catalogue is the opposite.
+
+---
+
 ## Reference Index
 
 Detailed domain knowledge, scientific foundations, and pattern catalogues are available in the `references/` directory:
