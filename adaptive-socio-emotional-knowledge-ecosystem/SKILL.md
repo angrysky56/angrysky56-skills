@@ -135,20 +135,27 @@ and `chronicEffect` fields, and it retrieves one system on demand instead of loa
 all seven. Call it in Step 1 once you have a candidate system. Prefer it over the
 reference file when both are available.
 
-**`match_patterns` — do not rely on it.** It scores by literal word overlap against
-pattern metadata, including stopwords, so it only returns matches when the signals are
-already phrased in framework vocabulary. Feeding it real observations ("refuses the
-change, won't say why") returns nothing; feeding it "identity threat, FEAR" returns the
-pattern that contains those words. That is circular — it can only find what you already
-named. Match patterns yourself against `references/pattern-library.md`, where you can
-reason semantically about behavioural resemblance.
+**`match_patterns` — useful as a shortlist, never as a verdict.** It matches words, not
+meaning, and it now says so. Read `matchQuality` first:
 
-**`analyze_behavior` — do not call it when this skill is loaded.** It performs no
-analysis. It returns a fixed scaffold — all seven systems, all twelve patterns, and the
-five step headings — identical regardless of input. Two costs: it duplicates the
-procedure you already have, and it front-loads the entire catalogue into context, which
-is the direct cause of the bloat that the silent-advisory discipline exists to prevent.
-More framework in context becomes more framework in the output.
+- `"lexical"` — it found real overlap and ranked candidates. Still verify against each
+  `recognizeBy` before adopting one; shared vocabulary can be coincidence.
+- `"none"` — no usable overlap, so it withholds ranking and returns the whole library
+  with scores stripped. This is the *common* case for ordinary language, because
+  "furious" shares no tokens with RAGE and "numb" shares none with SEEKING extinction.
+  Treat it as the library handed to you, and judge fit yourself.
+
+The failure it cannot escape: a burnout description ("furious for months, then numb,
+stopped caring") is a textbook Burnout Cascade that no token overlap will ever find.
+Semantic matching is your job, not the server's. `references/pattern-library.md` remains
+the fuller text when you want it.
+
+**`analyze_behavior` — a frame, not an analysis.** It returns the five steps scoped to
+candidate patterns for the situation, plus the output constraints. It performs no
+analysis; you do. Redundant when this skill is loaded — call it only for a second
+opinion on which patterns to consider, or when working somewhere this skill isn't
+available. Prefer the skill's own procedure, which is the same steps without the extra
+context.
 
 **`list_all`** is a cheap index and is fine for orientation.
 
