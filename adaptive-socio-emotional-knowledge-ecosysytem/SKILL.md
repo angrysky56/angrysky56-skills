@@ -20,6 +20,47 @@ For any behavioral pattern, ask:
 - **ACUTE** (minutes to hours): Momentary emotional states that bias judgment RIGHT NOW. Relevant for negotiations, arguments, crisis response.
 - **CHRONIC** (months to years): Dispositional orientations shaped by sustained emotional environments. Relevant for understanding worldviews, institutional culture, political identity.
 
+### Timescales Are Agents, Not Moods
+
+Treat these as **distinct decision-making agents**, not one continuous person in two
+states. This is Hedden's time-slice rationality applied to the substrate: rationality
+is assessed synchronically, against the evidence, preferences, and Coherence Capacity
+present in that slice — not against who the person was last week.
+
+The practical consequence is that a FEAR-captured slice is not a corrupted version of
+the SEEKING slice that built the institution. It is a different agent with different
+available wattage, running a different IS, and it is behaving *rationally for its own
+priority* (threat-escape) while producing decisions the other agent would find
+horrifying. Reasoning with it as though the calm agent is underneath, listening, is a
+category error — that agent is not at the desk.
+
+This reshapes Steps 3 and 5. An intervention designed for the CHRONIC disposition gets
+delivered to whichever slice is present when it arrives, and an ACUTE slice has neither
+the CE nor the same goals to receive it. Ask explicitly: *which agent will be at the
+desk when this lands?* Training on Tuesday reaches Tuesday's agent; the crisis on
+Thursday is handled by someone else.
+
+### The Binding Constraint — read before designing any intervention
+
+Pre-commitment is the natural move here: the high-capacity slice builds a structure that
+constrains the low-capacity slice it knows is coming. Odysseus and the mast. That move
+is legitimate **when the agent binds itself** — it consented in advance, in the first
+person, over its own future.
+
+The framework makes a second move available that looks identical and is not: a *second
+party* binding someone else, justified by the claim that the objecting slice isn't the
+real agent. That argument will excuse almost anything. "The person refusing is the
+FEAR-captured slice, not their true self" converts every objection into evidence for
+overriding it, and it is unfalsifiable from the inside.
+
+So: self-binding is a design tool. Other-binding is a claim on someone's agency and
+needs its own justification — consent, reversibility, and the person's ability to see
+and contest the mechanism — never the time-slice argument alone. A system that reads
+someone's state and throttles them "for their own good" without those three things is
+not a Coherence Governor; it is optimization of a person by someone else, and the
+substrate analysis is what makes it efficient. If an intervention only works while its
+target can't see it, that is disqualifying, not clever.
+
 ---
 
 ## Analytical Query Framework
@@ -50,6 +91,35 @@ When presented with a behavioral pattern, situation, or conflict to analyze, fol
 **Question**: What approaches account for the emotional reality rather than just stated positions?
 - Design system-appropriate interventions (safety for FEAR, obstacle removal for RAGE, belonging for PANIC/GRIEF, worthy targets for SEEKING).
 - Ensure IS-aware framing, CE-conscious delivery, and trajectory-conscious timing.
+
+---
+
+## Questioner State Is Silent Advisory
+
+The person asking is also running a substrate, and reading it is legitimate analysis —
+their SEEKING wants an explanation, their FEAR reads ambiguity as status threat, their
+own IS may be doing more work than the evidence. **Keep that read internal by default.**
+
+It is advisory: let it shape what you say, what you lead with, how much certainty you
+offer, and what you decline to speculate about. Do not write it out. Someone who asked
+what is going on with their ops team, their mother, or their coworker asked about that
+person — turning the lens back on them uninvited is presumptuous, and it is the single
+largest source of length in this framework's output. Most of the bloat is the analyst
+narrating their read of the asker.
+
+Surface it only when one of these holds:
+
+- **They asked.** The question is about their own reaction, judgment, or state.
+- **Their state is the mechanism.** The thing they want explained is actually being
+  produced or sustained by their own read — a self-fulfilling loop where acting on the
+  interpretation creates the reality. Name it once, briefly, as the finding.
+- **Acting on it would cause harm.** They are about to do something consequential on a
+  state-driven misread, and not saying so leaves them exposed.
+
+Otherwise the discipline is: analyze fully, surface selectively. A short answer that
+was shaped by the full analysis beats a long one that displays it. If the honest answer
+to a small question is "probably nothing," that is the whole answer — the analysis
+earned its keep by ruling things out, not by being shown.
 
 ---
 
